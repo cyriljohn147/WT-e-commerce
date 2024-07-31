@@ -1,48 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clothing SHOP</title>
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-      
+<head>
+    <title>Clothing Ecommerce Website</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">   
+</head>
 
-        <link rel="stylesheet" href="style.css">
-      <!-------------------------Font Awesome Icons --------------->  
-  <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
-  <!----------x---------------Font Awesome Icons --------x------->
-
-  <!----------x---------------Google font --------x------->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
-      
-      <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900;&display:swap">
-       <!----------x---------------Google font --------x----------------->
- 
-    </head>
 <body>
     <section id="header">
         <a href="#"><img src="https://i.postimg.cc/x8ncvFjr/logo.png"></a>
         <div>
-  <ul id="navbar">
-<li><a href="index.html" class="active">Home</a></li>
-<li><a href="shop.html">Shop</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="cart.html" id="lg-bag"><i class="fal fa-shopping-bag"></i></a>
-<span class="quantity">0</span>
-</li>
-<li><a href="#" id="close"<i class="far fa-times"></i></a></li>
+            <ul id="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./shop.html" class="active">Shop</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./cart.html" id="lg-bag"><i class="fal fa-shopping-bag"></i></a>
+                <span class="quantity">0</span>
+                </li>
+                <li><a href="#" id="close"<i class="far fa-times"></i></a></li>
             </ul>
         </div>
-<div id="mobile">
-<a href="cart.html" ><i class="fal fa-shopping-bag"></i>
-<span class="quantity">0</span>
-</a>
-<i id="bar" class="fas fa-outdent"></i>
-</div>
     </section>
+
+
+    <section id="product1" class="section-p1">
+        <div class="mt-5 container text-center">
+            <h2>ALL JERSEYS</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm" onclick="window.location.href='https://codepen.io/Motun/full/OJBwbrQ'">
+                        <img src="https://i.postimg.cc/kg9YYbTn/f1.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <span class="text-muted">adidas</span>
+                            <h5 class="card-title">Carton Astronault Tshirts</h5>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="text-primary">$78</h4>
+                            <a href="#" class="btn btn-outline-primary"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://i.postimg.cc/2yhT2kvb/f2.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <span class="text-muted">adidas</span>
+                            <h5 class="card-title">Carton Leave Tshirts</h5>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="text-primary">$78</h4>
+                            <a href="#" class="btn btn-outline-primary"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://i.postimg.cc/VL9DtNm2/f3.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <span class="text-muted">adidas</span>
+                            <h5 class="card-title">Rose Multicolor Tshirts</h5>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="text-primary">$78</h4>
+                            <a href="#" class="btn btn-outline-primary"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://i.postimg.cc/vZ3hPS1z/f4.jpg" class="card-img-top" alt="Product 4">
+                        <div class="card-body">
+                            <span class="text-muted">adidas</span>
+                            <h5 class="card-title">Pink Flower Tshirts</h5>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="text-primary">$78</h4>
+                            <a href="#" class="btn btn-outline-primary"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://i.postimg.cc/q7FLrhx6/f5.jpg" class="card-img-top" alt="Product 5">
+                        <div class="card-body">
+                            <span class="text-muted">adidas</span>
+                            <h5 class="card-title">Purple Flowering Tshirts</h5>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="text-primary">$78</h4>
+                            <a href="#" class="btn btn-outline-primary"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://i.postimg.cc/L86BZByZ/f7.jpg" class="card-img-top" alt="Product 6">
+                        <div class="card-body">
+                            <span class="text-muted">adidas</span>
+                            <h5 class="card-title">Short Knicker</h5>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="text-primary">$78</h4>
+                            <a href="#" class="btn btn-outline-primary"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://i.postimg.cc/zDxJ2f0H/f6.jpg" class="card-img-top" alt="Product 7">
+                        <div class="card-body">
+                            <span class="text-muted">adidas</span>
+                            <h5 class="card-title">2 in 1 Double Routed</h5>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="text-primary">$78</h4>
+                            <a href="#" class="btn btn-outline-primary"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="https://i.postimg.cc/x8qcBrpP/n6.jpg" class="card-img-top" alt="Product 8">
+                        <div class="card-body">
+                            <span class="text-muted">adidas</span>
+                            <h5 class="card-title">Ash Short</h5>
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="text-primary">$78</h4>
+                            <a href="#" class="btn btn-outline-primary"><i class="fal fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="#"><img src="https://i.postimg.cc/x8ncvFjr/logo.png" alt="Logo" class="mb-3"></a>
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong> Anurag University, Ghatkesar, Hydrabad</p>
+                    <p><strong>Phone:</strong> +23456876199, +23458903120</p>
+                    <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Privacy Policy</a></li>
+                        <li><a href="#" class="text-dark">Terms and Condition</a></li>
+                        <li><a href="#" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h4>My Account</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Sign In</a></li>
+                        <li><a href="#" class="text-dark">View Cart</a></li>
+                        <li><a href="#" class="text-dark">My Account</a></li>
+                        <li><a href="#" class="text-dark">My Wishlist</a></li>
+                        <li><a href="#" class="text-dark">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2023 All rights reserved!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./src/script.js"></script>
 </body>
 </html>
