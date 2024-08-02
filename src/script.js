@@ -4,24 +4,26 @@ let cno = parseInt(localStorage.getItem('cno')) || 0;
 export function cartAdd(price, itemName, brand, imgSrc) {
     cno++;
     cart.push({ price, itemName, brand, imgSrc });
+    console.log(cart[0]);
     document.getElementById('quantity').innerText = cno;
     localStorage.setItem('cart', JSON.stringify(cart));
     localStorage.setItem('cno', cno);
-  }
+}
   
-  export function cartRemove(itemName) {
-    console.log(itemName);
+export function cartRemove(itemName) {
+    console.log(cart.filter(item => item.itemName !== itemName));
     cart = cart.filter(item => item.itemName !== itemName);
-    localStorage.setItem('cart', JSON.stringify(cart));
     document.getElementById('quantity').innerText = cno = cart.length;
-  }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('cno', cno);
+    const itemElement = document.querySelector(`[data-name="${itemName}"]`);
+    if (itemElement) {
+      itemElement.remove();
+    }
+    updateCartDisplay();
+}
   
-  export function resetLocalStorage() {
-    localStorage.clear();
-    console.log("Local storage has been reset.");
-  }
-  
-  export function createProductCard(product,page) {
+export function createProductCard(product,page) {
     const colDiv = document.createElement('div');
     colDiv.className = 'col-md-3 mb-4';
   
@@ -42,7 +44,8 @@ export function cartAdd(price, itemName, brand, imgSrc) {
   
     const titleH5 = document.createElement('h5');
     titleH5.className = 'card-title';
-    titleH5.textContent = product.name;
+    if(page==="index" || page==="shop") {titleH5.textContent = product.name;} 
+    else if (page ==="cart") {titleH5.textContent = product.itemName;}
   
     const starDiv = document.createElement('div');
     starDiv.className = 'text-warning mb-2';
@@ -58,7 +61,7 @@ export function cartAdd(price, itemName, brand, imgSrc) {
   
     const addButton = document.createElement('a');
     addButton.className = 'btn btn-outline-primary';
-    if(page==="index") {
+    if(page==="index" || page ==="shop") {
       addButton.innerHTML = '<i class="fal fa-shopping-cart"></i>';
       addButton.onclick = function() {
         cartAdd(product.price, product.name, product.brand, product.imgSrc);
@@ -66,7 +69,7 @@ export function cartAdd(price, itemName, brand, imgSrc) {
     } else if (page ==="cart") {
         addButton.innerHTML = '<i class="fal fa-trash"></i>';
         addButton.onclick = function() {
-          cartRemove(product.name);
+          cartRemove(product.itemName);
       };
     }   
   
@@ -82,6 +85,21 @@ export function cartAdd(price, itemName, brand, imgSrc) {
     colDiv.appendChild(cardDiv);
   
     return colDiv;
-  }
+}
+
+export function updateCartDisplay() {
+    const productRow = document.querySelector('.cart');
+    productRow.innerHTML = '';
+    if (cart.length === 0) {
+      const noElements = document.createElement('h2');
+      noElements.textContent = "cart is empty";
+      productRow.appendChild(noElements);
+    } else {
+      cart.forEach(item => {
+        const productCard = createProductCard(item, 'cart');
+        productRow.appendChild(productCard);
+      });
+    }
+}
 
 export {cart,cno};

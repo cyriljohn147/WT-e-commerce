@@ -9,16 +9,17 @@ export function clearCart() {
     cart=[];
     cno=0;
     document.getElementById('quantity').innerText = cno;
-    document.querySelector('.cart').innerHTML = '<h1>No elements</h1>';
+    document.querySelector('.cart').innerHTML = '<h2>cart is empty</h2>';
     console.log("Local storage has been reset.");
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const productRow = document.querySelector('.cart'); 
 
     if (cart.length === 0) {
-        const noElements = document.createElement('h1');
-        noElements.textContent = "No elements";
+        const noElements = document.createElement('h2');
+        noElements.textContent = "cart is empty";
         productRow.appendChild(noElements);
     } else {
         document.getElementById('quantity').innerText = cno;

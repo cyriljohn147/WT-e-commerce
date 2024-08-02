@@ -6,7 +6,7 @@ let cno = parseInt(localStorage.getItem('cno')) || 0;
 export {cno , cart};
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (window.location.pathname.endsWith('index.html')) {
+  if (document.body.id === 'indexPage'){
       const productRow = document.querySelector('.home');
       
       if (productRow) {
