@@ -13,8 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
       if (productRow) {
           document.getElementById('quantity').innerText = cno;
           items.forEach(item => {
-              const productCard = createProductCard(item, "index");
-              productRow.appendChild(productCard);
+              if(item.brand === "Puma") {
+                const productCard = createProductCard(item, "index");
+                productRow.appendChild(productCard);
+              }
           });
       }
   }

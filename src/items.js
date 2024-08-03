@@ -9,11 +9,16 @@ class Product {
 
 // Initialize items
 export const items = [
+    new Product(1299,"Man city Home Kit","Puma","https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/770438/01/fnd/IND/fmt/png/Manchester-City-23/24-Men's-Football-Replica-Home-Jersey"),
+    new Product(999,"Man City Away Kit","Puma","https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/770449/02/fnd/IND/fmt/png/Manchester-City-23/24-Men's-Football-Away-Jersey"),
     new Product(799, 'Brazil Home Kit', 'Nike', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/95da4371-957e-4d87-b1ad-e3e47f9b1232/vini-jr-brazil-national-team-2024-match-away-mens-dri-fit-adv-soccer-jersey-3p0BGw.png'),
     new Product(699, 'Norway Away Kit', 'Nike', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/303f5665-92f4-4c54-87eb-901e30e99cf6/erling-haaland-norway-national-team-2024-stadium-away-mens-dri-fit-soccer-jersey-dKlxJ8.png'),
+    new Product(899,"AC Milan Away Kit","Puma","https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/770391/02/fnd/IND/fmt/png/AC-Milan-23/24-Men's-Away-Jersey"),
     new Product(799, 'France Away Kit', 'Nike', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e7f76bce-cac5-45ca-a65a-0c4a9366fe1c/kylian-mbapp%C3%A9-france-national-team-2024-stadium-away-mens-dri-fit-soccer-jersey-qXW0jM.png'),
     new Product(899, 'Norway Home Kit', 'Nike', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6e431b90-c96e-480a-885c-03b358b3b90b/NK+2024%2F25+M+REP+JRSY+-+Player.png'),
+    new Product(799,"Dortmund Home Kit","Puma","https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/770604/01/fnd/IND/fmt/png/Borussia-Dortmund-23/24-Men's-Football-Home-Jersey"),
     new Product(999, 'Netherland Home Kit', 'Nike', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/23af8012-d9da-4ae5-b6d8-02a6a2de748c/virgil-van-dijk-netherlands-national-team-2024-stadium-home-big-kids-dri-fit-soccer-jersey-F41PtF.png'),
+    // new Product(1499,"Arsenal Away Kit","Adidas","https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/588311e46186457b81db1df5428c285e_9366/Arsenal_24-25_Away_Jersey_Multicolor_IT6148_HM1.jpg"),
     new Product(799, 'France Home Kit', 'Nike', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/06e762fc-047f-4303-8ac1-6cb3cc28dc39/kylian-mbapp%C3%A9-france-national-team-2024-match-home-mens-dri-fit-adv-soccer-jersey-FBLcs3.png'),
     new Product(899, 'USA Home Kit', 'Nike', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d57db7b9-ce47-479b-a944-ead941772333/alex-morgan-uswnt-2024-stadium-home-mens-dri-fit-soccer-jersey-3bp5Bz.png'),
     new Product(1099, 'Barcelona Away Kit', 'Nike', 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d89e0ef8-7403-450f-b0e9-ce51bf179dcd/fc-barcelona-2023-24-stadium-fourth-big-kids-dri-fit-soccer-jersey-SXSgCx.png')
