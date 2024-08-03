@@ -5,10 +5,11 @@ let bill = parseInt(localStorage.getItem('bill')) || 0;
 export function cartAdd(price, itemName, brand, imgSrc) {
     cno++;
     bill+=price;
-    console.log(bill,price);
+    brand = "size : " + prompt("What size(XS/S/M/L/XL)");
     cart.push({ price, itemName, brand, imgSrc });
     console.log(cart[0]);
     document.getElementById('quantity').innerText = cno;
+    alert("Added To Cart");
     localStorage.setItem('cart', JSON.stringify(cart));
     localStorage.setItem('cno', cno);
     localStorage.setItem('bill',bill);

@@ -6,18 +6,6 @@ document.getElementById('bill').innerHTML=bill+"₹";
 
 // console.log(cart.length);
 
-export function clearCart() {
-    localStorage.clear();
-    cart=[];
-    cno=0;
-    bill =0; 
-    document.getElementById('quantity').innerText = cno;
-    document.querySelector('.cart').innerHTML = '<h2>cart is empty</h2>';
-    document.getElementById('bill').innerHTML = bill+"₹";
-    console.log("Local storage has been reset.");
-}
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const productRow = document.querySelector('.cart'); 
 
@@ -36,7 +24,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const clearCartButton = document.getElementById('clearCartButton');
 if (clearCartButton) {
-    clearCartButton.addEventListener('click', clearCart);
+    clearCartButton.addEventListener('click',function() {
+        localStorage.clear();
+        cart=[];
+        cno=0;
+        bill =0; 
+        document.getElementById('quantity').innerText = cno;
+        document.querySelector('.cart').innerHTML = '<h2>cart is empty</h2>';
+        document.getElementById('bill').innerHTML = bill+"₹";
+        console.log("Local storage has been reset.");
+    });
+}
+
+const checkoutButton = document.getElementById('checkoutButton');
+if (checkoutButton) {
+    checkoutButton.addEventListener('click', function checkout() {
+        localStorage.clear();
+        cart=[];
+        cno=0;
+        bill =0;
+        document.getElementById('quantity').innerText = cno;
+        document.querySelector('.cart').innerHTML = '<h2>cart is empty</h2>';
+        document.getElementById('bill').innerHTML = bill+"₹";
+        alert("Your order has been placed successfully!");
+    });
 }
 
 export {cart,cno, bill};
