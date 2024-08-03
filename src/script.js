@@ -1,21 +1,29 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cno = parseInt(localStorage.getItem('cno')) || 0;
+let bill = parseInt(localStorage.getItem('bill')) || 0;
 
 export function cartAdd(price, itemName, brand, imgSrc) {
     cno++;
+    bill+=price;
+    console.log(bill,price);
     cart.push({ price, itemName, brand, imgSrc });
     console.log(cart[0]);
     document.getElementById('quantity').innerText = cno;
     localStorage.setItem('cart', JSON.stringify(cart));
     localStorage.setItem('cno', cno);
+    localStorage.setItem('bill',bill);
 }
   
-export function cartRemove(itemName) {
+export function cartRemove(itemName,price) {
+
+    bill-=price;
     console.log(cart.filter(item => item.itemName !== itemName));
     cart = cart.filter(item => item.itemName !== itemName);
     document.getElementById('quantity').innerText = cno = cart.length;
+    document.getElementById('bill').innerHTML = bill + "₹"
     localStorage.setItem('cart', JSON.stringify(cart));
     localStorage.setItem('cno', cno);
+    localStorage.setItem('bill',bill);
     const itemElement = document.querySelector(`[data-name="${itemName}"]`);
     if (itemElement) {
       itemElement.remove();
@@ -57,7 +65,7 @@ export function createProductCard(product,page) {
   
     const priceH4 = document.createElement('h4');
     priceH4.className = 'text-primary';
-    priceH4.textContent = `$${product.price}`;
+    priceH4.textContent = `${product.price}₹`;
   
     const addButton = document.createElement('a');
     addButton.className = 'btn btn-outline-primary';
@@ -69,7 +77,7 @@ export function createProductCard(product,page) {
     } else if (page ==="cart") {
         addButton.innerHTML = '<i class="fal fa-trash"></i>';
         addButton.onclick = function() {
-          cartRemove(product.itemName);
+          cartRemove(product.itemName,product.price);
       };
     }   
   
@@ -102,4 +110,4 @@ export function updateCartDisplay() {
     }
 }
 
-export {cart,cno};
+export {cart,cno,bill};

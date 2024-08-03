@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Berkshire+Swash&family=Comic+Neue:wght@700&family=Gentium+Book+Plus:wght@400;700&family=Lato:ital,wght@0,400;0,700;0,900;1,700&family=Lexend+Deca:wght@500&family=Lexend:wght@500&family=Montserrat:wght@500&family=Open+Sans:wght@500;800&family=Roboto:wght@100;400&family=Sue+Ellen+Francisco&family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">   
 </head>
 
-<body>
+<body id="cartPage">
     <section id="header">
         <a href="#"><img src="../img/ejlogo.jpg"></a>
         <div>
@@ -20,16 +20,14 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./shop.html">Shop</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./signin.html">Log In</a></li>
                 <li><a href="./cart.html" id="lg-bag" class="active"><i class="fal fa-shopping-bag"></i></a>
                 <span id="quantity">0</span>
-                </li>
-                <li><a href="#" id="close"<i class="far fa-times"></i></a></li>
             </ul>
         </div>
     </section>
 
-
+    
     <section id="product1" class="section-p1">
         <div class="container text-center" style="margin-top: 100px;">
             <h2 class="mt-5" style="color: black;">YOUR CART</h2>
@@ -40,7 +38,9 @@
     </section>
 
     <section id="clear">
-        <button id="clearCartButton" class="btn btn-outline-primary d-block mx-auto">CLEAR CART</button>
+        <h3 class="text-center" style="color: black;">BILL</h3>
+        <div id="bill" class="text-center mb-4">90</div>
+        <button id="clearCartButton" class="btn btn-outline-primary d-block mx-auto" style="margin-bottom: 50px;">CLEAR CART</button>
     </section>
 
     <footer class="bg-light py-5">

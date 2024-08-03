@@ -2,8 +2,9 @@ import { items } from './items.js';
 import { createProductCard } from './script.js';
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cno = parseInt(localStorage.getItem('cno')) || 0;
+let bill = parseInt(localStorage.getItem('bill')) || 0;
 
-export {cno , cart};
+export {cno , cart , bill};
 
 document.addEventListener('DOMContentLoaded', function() {
   if (document.body.id === 'indexPage'){
