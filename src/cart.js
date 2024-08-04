@@ -38,7 +38,7 @@ if (clearCartButton) {
 
 const checkoutButton = document.getElementById('checkoutButton');
 if (checkoutButton) {
-    checkoutButton.addEventListener('click', function checkout() {
+    checkoutButton.addEventListener('click', function() {
         localStorage.clear();
         cart=[];
         cno=0;
